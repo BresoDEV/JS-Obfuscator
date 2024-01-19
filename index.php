@@ -83,18 +83,123 @@
 </body>
 <script>
 
+	function cripto(str) {
+		var linhas = str.split('\n');
+		for (var i = 0; i < linhas.length; i++) {
+			var linhaatual = linhas[i];
+			if (linhaatual.includes(';')) {
+				//-----------------------------------------------------------
+				if (!linhaatual.includes('for') && !linhaatual.includes('while')) {
+					linhaatual = linhaatual.replace(/;/g, ';' +
+						'b = Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI); ' +
+						'_0b = Math.pow(Math.round(b), (b * 0xAB) / (b + 0xAB) * Math.PI); ' +
+						'_0c = Math.pow(Math.round(_0b), (b * 0xAB) / (_0b + 0xAB) * Math.PI); ' +
+						'' + '/*BresoDEV*/', true);
+				}
+
+			}
+			//------------------------------------------------------------
+			if (linhaatual.includes('{')) {
+				if (!linhaatual.includes('= {') && !linhaatual.includes('={')&& 
+					!linhaatual.includes(', {') && !linhaatual.includes(',{')&&
+					!linhaatual.includes('switch') && !linhaatual.includes(',{')) {
+					linhaatual = linhaatual.replace(/{/g, '{' +
+						'b = Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
+						'b = Math.pow(b, (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
+						'b = (b * 0xAB) - (b + 0xAB) * Math.PI; ' +
+						'b = b+Math.pow(b, (b * 0xAB) - (b + 0xB) * Math.PI); ' +
+						'b = b+Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
+						'b = b+Math.pow(b, (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
+						'b = (b * 0xAB) - (b + 0xAB) * Math.PI; ' +
+						'b = Math.pow(b, (b * 0xAB) - (b + 0xB) * Math.PI); ' +
+						'_0c = Math.pow(Math.round(_0b), (b * 0xAB) - (_0b + 0xAB) * Math.PI); ' +
+						'b = b+Math.pow(b, (b * 0xAB) - (b + 0x2) * Math.PI); ' +
+						'b = b+Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
+						'b = b+Math.pow(b, (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
+						'b = (b * 0xAB) - (b + 0xAB) * Math.PI; ' +
+						'b = Math.pow(b, (b * 0xAB) - (b + 0xB) * Math.PI); ' +
+						'_0c = Math.pow(Math.round(_0b), (b * 0xAB) - (_0b + 0xAB) * Math.PI); ' +
+						'b = b+Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
+						'b = b+Math.pow(b, (b * 0xAB) - (b + 0xAB) * Math.PI);' +
+						'b = b+Math.pow(b, (b * 0xAB) - (b + 0x2) * Math.PI); ' +
+						'b = b+Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
+						'b = b+Math.pow(b, (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
+						'_0c = Math.pow(Math.round(_0b), (b * 0xAB) - (_0b + 0xAB) * Math.PI); ' +
+						'b = (b * 0xAB) - (b + 0xAB) * Math.PI; ' +
+						'b = Math.pow(b, (b * 0xAB) - (b + 0xB) * Math.PI); ' +
+						'b = Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
+						'b = Math.pow(b, (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
+						'b = (b * 0xAB) - (b + 0xAB) * Math.PI; ' +
+						'b = Math.pow(b, (b * 0xAB) - (b + 0xB) * Math.PI); ' +
+						'_0c = Math.pow(Math.round(_0b), (b * 0xAB) - (_0b + 0xAB) * Math.PI); ' +
+						'b = Math.pow(b, (b * 0xAB) - (b + 0x2) * Math.PI); ' +
+						'b = Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
+						'b = Math.pow(b, (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
+						'b = (b * 0xAB) - (b + 0xAB) * Math.PI; ' +
+						'b = b+Math.pow(b, (b * 0xAB) - (b + 0xB) * Math.PI); ' +
+						'b = b+Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
+						'b = b+Math.pow(b, (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
+						'_0c = Math.pow(Math.round(_0b), (b * 0xAB) - (_0b + 0xAB) * Math.PI); ' +
+						'b = Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
+						'b = Math.pow(b, (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
+						'_0c = Math.pow(Math.round(_0b), (b * 0xAB) - (_0b + 0xAB) * Math.PI); ' +
+						'b = b+Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
+						'b = b+Math.pow(b, (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
+						'b = (b * 0xAB) - (b + 0xAB) * Math.PI; ' +
+						'b = Math.pow(b, (b * 0xAB) - (b + 0xB) * Math.PI);' +
+						'b = b+Math.pow(b, (b * 0xAB) - (b + 0x2) * Math.PI); ' +
+						'b = b+Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
+						'b = b+Math.pow(b, (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
+						'b = (b * 0xAB) - (b + 0xAB) * Math.PI; ' +
+						'b = b+Math.pow(b, (b * 0xAB) - (b + 0xB) * Math.PI);' +
+						'b = b+Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
+						'b = b+Math.pow(b, (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
+						'_0c = Math.pow(Math.round(_0b), (b * 0xAB) - (_0b + 0xAB) * Math.PI); ' +
+						'/*BresoDEV*/');
+				}
+			}
+			if (linhaatual.includes('()')) {
+				linhaatual = linhaatual.replace('()', '(/*BresoDEV*/)');
+			}
+
+			if (linhaatual.includes('NaN')) {
+				linhaatual = linhaatual.replace('NaN', '');
+			}
+
+			if (linhaatual.includes('console.log')) {
+				if (!linhaatual.includes(', console') && !linhaatual.includes(',console')) {
+					linhaatual = linhaatual.replace('console.log', '' +
+						'b = Math.pow(b, (b * 0xAB) - (b + 0xB) * Math.PI); ' +
+						'_0b = Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
+						'_0c = Math.pow(Math.round(_0b), (b * 0xAB) - (_0b + 0xAB) * Math.PI); console.log');
+
+				}
+			}
+
+
+			linhas[i] = linhaatual;
+		}
+		var final = linhas.join('\n');
+		final = 'var b = Math.pow(b, (b * 0xAB) + (b + 0xB) * Math.PI);' +
+			'var _0b = Math.pow(Math.round(b), (b * 0xAB) + (b + 0xAB) * Math.PI);' +
+			'var _0c = Math.pow(Math.round(_0b), (b * 0xAB) + (_0b + 0xAB) * Math.PI);' +
+			'var _0c = Math.pow(Math.round(_0b), (b * 0xAB) + (_0b + 0xAB) * Math.PI);' +
+			'var _03 = Math.pow(Math.round(_0c), (b * 0xAB) + (_0b + 0xAB) * Math.PI);' +
+			'console.error("JS Obfuscated by BresoDEV");' + final;
+		return final;
+	}
+
 
 	document.getElementById('b').addEventListener('click', () => {
 		document.getElementById('span').style.display = 'none';
 		if (document.getElementById('t').value.includes(';')) {
-			if (document.getElementById('t').value.includes('BresoDEV')) 
-				{
-					document.getElementById('span').textContent = 'Code allready obfuscated';
+			if (document.getElementById('t').value.includes('BresoDEVV')) {
+				document.getElementById('span').textContent = 'Code allready obfuscated';
 				document.getElementById('span').style.display = 'block';
-				}
-				else{
-					document.getElementById('t').value = cr(document.getElementById('t').value);
-				}
+			}
+			else {
+				document.getElementById('t').value = cripto(document.getElementById('t').value);
+			}
 		}
 		else {
 			document.getElementById('span').textContent = 'Fix your code,";" missing';
@@ -122,114 +227,6 @@
 	});
 
 
-
-	//document.getElementById('aa').addEventListener('click', () => {
-	//	alert('best');
-	//});
-
-
-
-	function cr(st) {
-
-
-		if (st.includes(';')) {
-			st = st.replace(/;/g, ';' +
-				'b = Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI); ' +
-				'_0b = Math.pow(Math.round(b), (b * 0xAB) / (b + 0xAB) * Math.PI); ' +
-				'_0c = Math.pow(Math.round(_0b), (b * 0xAB) / (_0b + 0xAB) * Math.PI); ' +
-				'' + '/*BresoDEV*/', true);
-		}
-
-		if (st.includes('{')) {
-			st = st.replace(/{/g, '{' +
-				'b = Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
-				'b = Math.pow(b, (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
-				'b = (b * 0xAB) - (b + 0xAB) * Math.PI; ' +
-				'b = b+Math.pow(b, (b * 0xAB) - (b + 0xB) * Math.PI); ' +
-				'b = b+Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
-				'b = b+Math.pow(b, (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
-				'b = (b * 0xAB) - (b + 0xAB) * Math.PI; ' +
-				'b = Math.pow(b, (b * 0xAB) - (b + 0xB) * Math.PI); ' +
-				'_0c = Math.pow(Math.round(_0b), (b * 0xAB) - (_0b + 0xAB) * Math.PI); ' +
-				'b = b+Math.pow(b, (b * 0xAB) - (b + 0x2) * Math.PI); ' +
-				'b = b+Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
-				'b = b+Math.pow(b, (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
-				'b = (b * 0xAB) - (b + 0xAB) * Math.PI; ' +
-				'b = Math.pow(b, (b * 0xAB) - (b + 0xB) * Math.PI); ' +
-				'_0c = Math.pow(Math.round(_0b), (b * 0xAB) - (_0b + 0xAB) * Math.PI); ' +
-				'b = b+Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
-				'b = b+Math.pow(b, (b * 0xAB) - (b + 0xAB) * Math.PI);' +
-				'b = b+Math.pow(b, (b * 0xAB) - (b + 0x2) * Math.PI); ' +
-				'b = b+Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
-				'b = b+Math.pow(b, (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
-				'_0c = Math.pow(Math.round(_0b), (b * 0xAB) - (_0b + 0xAB) * Math.PI); ' +
-				'b = (b * 0xAB) - (b + 0xAB) * Math.PI; ' +
-				'b = Math.pow(b, (b * 0xAB) - (b + 0xB) * Math.PI); ' +
-				'b = Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
-				'b = Math.pow(b, (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
-				'b = (b * 0xAB) - (b + 0xAB) * Math.PI; ' +
-				'b = Math.pow(b, (b * 0xAB) - (b + 0xB) * Math.PI); ' +
-				'_0c = Math.pow(Math.round(_0b), (b * 0xAB) - (_0b + 0xAB) * Math.PI); ' +
-				'b = Math.pow(b, (b * 0xAB) - (b + 0x2) * Math.PI); ' +
-				'b = Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
-				'b = Math.pow(b, (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
-				'b = (b * 0xAB) - (b + 0xAB) * Math.PI; ' +
-				'b = b+Math.pow(b, (b * 0xAB) - (b + 0xB) * Math.PI); ' +
-				'b = b+Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
-				'b = b+Math.pow(b, (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
-				'_0c = Math.pow(Math.round(_0b), (b * 0xAB) - (_0b + 0xAB) * Math.PI); ' +
-				'b = Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
-				'b = Math.pow(b, (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
-				'_0c = Math.pow(Math.round(_0b), (b * 0xAB) - (_0b + 0xAB) * Math.PI); ' +
-				'b = b+Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
-				'b = b+Math.pow(b, (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
-				'b = (b * 0xAB) - (b + 0xAB) * Math.PI; ' +
-				'b = Math.pow(b, (b * 0xAB) - (b + 0xB) * Math.PI);' +
-				'b = b+Math.pow(b, (b * 0xAB) - (b + 0x2) * Math.PI); ' +
-				'b = b+Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
-				'b = b+Math.pow(b, (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
-				'b = (b * 0xAB) - (b + 0xAB) * Math.PI; ' +
-				'b = b+Math.pow(b, (b * 0xAB) - (b + 0xB) * Math.PI);' +
-				'b = b+Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
-				'b = b+Math.pow(b, (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
-				'_0c = Math.pow(Math.round(_0b), (b * 0xAB) - (_0b + 0xAB) * Math.PI); ' +
-				'/*BresoDEV*/');
-		}
-
-
-		if (st.includes('()')) {
-			st = st.replace('()', '(/*BresoDEV*/)');
-		}
-		if (st.includes('NaN')) {
-			st = st.replace('NaN', '');
-		}
-
-		if (st.includes('console.log')) {
-			st = st.replace('console.log', '' +
-				'b = Math.pow(b, (b * 0xAB) - (b + 0xB) * Math.PI); ' +
-				'_0b = Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
-				'_0c = Math.pow(Math.round(_0b), (b * 0xAB) - (_0b + 0xAB) * Math.PI); console.log');
-		}
-		if (st.includes('alert(')) {
-			st = st.replace('alert(', '' +
-				'b = Math.pow(b, (b * 0xAB) - (b + 0xB) * Math.PI); ' +
-				'_0b = Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
-				'_0c = Math.pow(Math.round(_0b), (b * 0xAB) - (_0b + 0xAB) * Math.PI); alert(');
-		}
-
-
-
-		st = 'var b = Math.pow(b, (b * 0xAB) + (b + 0xB) * Math.PI);' +
-			'var _0b = Math.pow(Math.round(b), (b * 0xAB) + (b + 0xAB) * Math.PI);' +
-			'var _0c = Math.pow(Math.round(_0b), (b * 0xAB) + (_0b + 0xAB) * Math.PI);' +
-			'var _0c = Math.pow(Math.round(_0b), (b * 0xAB) + (_0b + 0xAB) * Math.PI);' +
-			'var _03 = Math.pow(Math.round(_0c), (b * 0xAB) + (_0b + 0xAB) * Math.PI);' +
-			'console.error("JS Obfuscated by BresoDEV");' + st;
-		return st;
-
-
-
-	}
 
 	//-----------------------------------------------------------
 
