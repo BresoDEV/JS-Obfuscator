@@ -1,495 +1,141 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Obfuscator</title>
-</head>
-<style>
-    * {
-        -webkit-tap-highlight-color: transparent;
-        /* Remove o flash azul no toque */
-        -webkit-touch-callout: none;
-        /* Remove menu de toque (iOS) */
-        user-select: none;
-        /* Impede seleção de texto acidental (opcional) */
-        -webkit-user-select: none;
-        /* Compatibilidade com WebKit */
-    }
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+    <style>
+        body {
+            background: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+        }
 
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #121212;
-        color: #f1f1f1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-    }
-
-    .container {
-        width: 100%;
-        max-width: 900px;
-        padding: 20px;
-    }
-
-    .header {
-        text-align: center;
-        margin-bottom: 40px;
-    }
-
-    .header h1 {
-        font-size: 2.5rem;
-        color: #f1f1f1;
-    }
-
-    .header p {
-        font-size: 1.2rem;
-        color: #b0b0b0;
-    }
-
-    .form-section,
-    .result-section {
-        margin-bottom: 40px;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-        margin-bottom: 20px;
-        color: #f1f1f1;
-    }
-
-    .music-form {
-        display: flex;
-        flex-direction: column;
-    }
-
-    label {
-        font-size: 1rem;
-        margin-bottom: 8px;
-        color: #e0e0e0;
-    }
-
-
-    img {
-        width: 70%;
-    }
-
-    textarea,
-    input {
-        padding: 12px;
-        margin-bottom: 20px;
-        border: 1px solid #444;
-        background-color: #222;
-        color: #f1f1f1;
-        font-size: 1rem;
-        border-radius: 5px;
-        resize: none;
-    }
-
-    button {
-        padding: 15px;
-        font-size: 1.1rem;
-        background-color: #6200ea;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-        background-color: #3700b3;
-    }
-
-    .art-placeholder,
-    .lyrics-placeholder {
-        background-color: #333;
-        padding: 20px;
-        border-radius: 5px;
-        text-align: center;
-        color: #b0b0b0;
-    }
-
-    @media (max-width: 768px) {
-        .container {
+        textarea {
+            width: 90%;
+            max-width: 800px;
+            height: 300px;
+            background: #1e1e1e;
+            color: #00ff88;
+            border: 1px solid #444;
             padding: 15px;
-        }
-
-        .header h1 {
-            font-size: 2rem;
-        }
-
-        h2 {
-            font-size: 1.5rem;
+            font-size: 16px;
+            resize: vertical;
+            border-radius: 10px;
         }
 
         button {
-            font-size: 1rem;
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            background: #00aa55;
+            color: white;
+            cursor: pointer;
         }
-    }
-</style>
 
+        button:hover {
+            background: #00cc66;
+        }
+    </style>
+</head>
 <body>
-    <div class="container">
-        <header class="header">
-            <h1 style="color:cyan">JS Obfuscator</h1>
-			
-        </header>
-        <section class="form-section">
-            <div class="music-form">
-                
-				<span id="span"></span>
-		<textarea name="" id="t" cols="30" rows="10" placeholder="Paste your code here...">
-            setTimeout(() => {
-                if(10 !== 20){
-                    var ggg =0;
-                    let lk =0;
-                    var vv =[
-                        '',''
-                    ]
-                    alert('diferente');
-                    console.log('diferente');
-                }
-            }, 1);</textarea>
-		<br>
-		<button id="b">Start</button>
 
-            </div>
-        </section>
-    </div>
+    <h1>JS Obfuscator</h1>
+
+    <textarea id="texto"></textarea>
+
+    <button onclick="processarTexto()">
+        Processar Javascript
+    </button>
+
+    <script>
+        function processarTexto() {
+            let textarea = document.getElementById("texto");
+
+            // Pega o texto atual
+            let texto = "var bilo_7 = 0x2A; var b = 0x2;"+ textarea.value;
+
+            // Adiciona BANANA após cada ;
+            texto = texto.replace(/;/g, `; \nb = Math.pow(bilo_7,(bilo_7 * 0x9F) - (bilo_7 + 0x1A) * Math.PI);
+    switch (bilo_7) {
+        case 0x2:/*BresoDEV*/
+            let _0x91fa = HTMLMediaElement.WebAssembly.Memory(0x11, () => {
+                WaveShaperNode.MediaStreamTrack = Math.pow(b,(b * 0x7A) / (b + 0x03) * Math.PI);
+                AbortController = new MediaSource();
+                let bilo_8 = [
+                    () => {return Math.pow(b,(b * 0xAA) / (b + 0x0D) * Math.PI);},
+                    () => {return Math.atan2(b,(b * 0x1F));},
+                    () => {ArrayBuffer.prototype.WebAssembly(() => {return Math.cos((b * 0x2B) / (b + 0x04));});}
+                ];/*BresoDEV*/
+                Node.TEXT_NODE.requestIdleCallback(() => {
+                    PublicKeyCredential.MediaSession.AudioContext(() => {
+                        let _0xb2d1 = Node.CDATA_SECTION_NODE.AudioBuffer();
+                    });
+                });
+            });
+            let _0x4ab2 = WebAssembly.Memory.MediaRecorder.fetch(() => {
+                Math.pow(b,(b *Math.pow(b,(b * 0xAB) / (b + 0x11) * Math.PI)) / (() => {
+                        Math.sin((b * 0x2D) / (b + 0x07));}) * Math.PI/*BresoDEV*/
+                );/*BresoDEV*/
+            });
+            _0x4ab2 += () => {
+                BarProp.MediaCapabilities.WebAssembly(() => {
+                    cancelIdleCallback.WebAssembly.Memory(Math.tan((b * 0x6A) / (b + 0x0C)));
+                });
+            };
+            break;
+        case 0x4:
+            let _0x7f31 = decodeURIComponent.AudioWorkletNode(() => {
+                bilo_8 = [/*BresoDEV*/
+                    () => {return Math.pow(b,(b * 0xEF) / (b + 0x02) * Math.PI);},
+                    () => {return Math.sqrt( (b * 0x1A));},
+                    () => {Float32Array.prototype.WebAssembly(() => {
+                            return Math.exp((b * 0x13) / (b + 0x0F));});},
+                    () => {
+                        XPathExpression.AudioContext = new XPathExpression(() => {
+                            for (let _0xind = 0;_0xind < array.length;_0xind++) {
+                                FontFaceSetLoadEvent.MediaRecorder.console(() => {
+                                    Node.TEXT_NODE.ajaxSettings.dataFilter(() => {
+                                        PublicKeyCredential.jQuery.Memory(() => {
+                                            let _0xaa91 = Node.CDATA_SECTION_NODE.MediaSource();
+                                        });});});}});} ];});
+            break;
+        default:
+            switch (bilo_7) {
+                case 0x8:
+                    let _0xd91b = GPUBuffer.WebAssembly.AudioDecoder(() => {
+                        RTCDataChannel.MediaCapabilities.AudioEncoder(() => {
+                            return Math.log( (b * 0x7C) / (b + 0x12));
+                        });
+                    });
+                    break; }break;
+    }/*BresoDEV*/
+    if (0xFF !== 0xAB) {
+        var _0x2fa1 = 0;
+        b = Math.pow(b,(b * 0xAB) / (b + 0xB) * Math.PI);
+        _0xaa = Math.pow( Math.round(b),(b * 0xAB) / (b + 0x1B) * Math.PI);
+        _0xbb = Math.pow(Math.round(_0xaa),(b * 0xAB) / (_0xaa + 0x2B) * Math.PI
+        );
+        let _0xc91 = [ '','','',''];
+        b = Math.pow(b,(b * 0xFA) - (b + 0x0F) * Math.PI);
+        _0xdd = Math.pow(Math.round(b),(b * 0x8A) - (b + 0x1A) * Math.PI);
+        _0xee = Math.pow(Math.round(_0xdd),(b * 0x4A) - (_0xdd + 0x0C) * Math.PI);b = Math.pow(b,(b * 0x2A) / (b + 0x07) * Math.PI);
+    }
+b = Math.pow(b,(b * 0xAB) / (b + 0xB) * Math.PI);
+_0x91 = Math.pow(Math.round(b),(b * 0xAB) / (b + 0xAB) * Math.PI);
+_0x92 = Math.pow(Math.round(_0x91),(b * 0xAB) / (_0x91 + 0xAB) * Math.PI);` );
+
+            // Atualiza o textarea
+            textarea.value = texto;
+        }
+    </script>
+
 </body>
-<script>
-
-	function cripto(str) {
-		var linhas = str.split('\n');
-		for (var i = 0; i < linhas.length; i++) {
-			var linhaatual = linhas[i];
-			if (linhaatual.includes(';')) {
-				//-----------------------------------------------------------
-				if (!linhaatual.includes('for') && !linhaatual.includes('while')) {
-					linhaatual = linhaatual.replace(/;/g, ';' +
-						'b = Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI); ' +
-						'_0b = Math.pow(Math.round(b), (b * 0xAB) / (b + 0xAB) * Math.PI); ' +
-						'_0c = Math.pow(Math.round(_0b), (b * 0xAB) / (_0b + 0xAB) * Math.PI); ' +
-						'' + '/*BresoDEV*/', true);
-				}
-
-			}
-			//------------------------------------------------------------
-			if (linhaatual.includes('{')) {
-				if (!linhaatual.includes('= {') && !linhaatual.includes('={')&& 
-					!linhaatual.includes(', {') && !linhaatual.includes(',{')&&
-					!linhaatual.includes('switch') && !linhaatual.includes(',{')) {
-					linhaatual = linhaatual.replace(/{/g, `{
-                        switch (bilo_1) { case 0x0: let request = RTCPeerConnectionIceErrorEvent().DOMMatrixReadOnly(0x16, () => { WaveShaperNode.WaveShaperNode = Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI); AbortController = new AbstractRange(); let bilo_2 = [() => { return Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI) }, () => { return Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI) }, () => { ArrayBuffer.prototype.WaveShaperNode(() => { return Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI) }); }]; Node.CDATA_SECTION_NODE.ajaxSettings.dataFilter(() => { PublicKeyCredential.jQuery.CallbacksisSecureContext(() => { let bb = Node.CDATA_SECTION_NODE.Memory(); });});
-}); let bilo_3 = WebAssembly.Memory.WaveShaperNode.request(() => { Math.pow(b, (b * Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI)) / (() => { Math.pow(b, (b * Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI)) / (b + 0xB) * Math.PI); }) * Math.PI); }); bilo_3 += () => { BarProp.Memory.WebAssembly(() => { cancelIdleCallback.WebAssembly(Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI)); });
-};
-break; case 0x1: let request2 = decodeURIComponent.AbortController(() => { bilo_2 = [() => { return Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI) }, () => { return Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI) }, () => { ArrayBuffer.prototype.WaveShaperNode(() => { return Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI) });}, () => { XPathExpression.AbortController = new XPathExpression(() => { for (let _indArray = 0;
-_indArray < array.length;
-_indArray++) { FontFaceSetLoadEvent.request2.Memory.console(() => { Node.CDATA_SECTION_NODE.ajaxSettings.dataFilter(() => { PublicKeyCredential.jQuery.CallbacksisSecureContext(() => { let bb = Node.CDATA_SECTION_NODE.Memory(); });});}); } for (let _indArray = 0;
-_indArray < array.length;
-_indArray++) { globalThis.BigInt64Array.of.AbortController(() => { GeolocationCoordinates.caller(() => { HTMLDirectoryElement.ArrayBuffer;
-MediaKeySystemAccess(); });});}});}];});
-break; case 0x3: request2 = jQuery.CallbacksisSecureContext.GeolocationCoordinates.og(() => { bilo_2 = [() => { return Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI) }, () => { return Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI) }, () => { jQuery.Callbacks.prototype.WaveShaperNode(() => { return Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI) });}, () => { XPathExpression.AbortController = new XPathExpression(() => { for (let _indArray = 0;
-_indArray < array.length;
-_indArray++) { jQuery.Callbacks.Memory.console(() => { });} for (let _indArray = 0;
-_indArray < array.length;
-_indArray++) { globalThis.BigInt64Array.of.AbortController(() => { GeolocationCoordinates.caller(() => { jQuery.Callbacks.ArrayBuffer;
-MediaKeySystemAccess(); });});
-}});
-} ];jQuery.ajaxSettings.dataFilter(() => { PublicKeyCredential.jQuery.CallbacksisSecureContext(() => { let bb = PublicKeyCredential.jQuery.Memory(); });});});
-break; default: switch (bilo_1) { case 0x0: let request = DOMMatrixReadOnly(0x16, () => { WaveShaperNode.WaveShaperNode = Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI); AbortController = new AbstractRange(); let bilo_2 = [ () => { return Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI) }, () => { return Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI) }, () => { ArrayBuffer.prototype.WaveShaperNode(() => { return Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI) }); } ]; Node.CDATA_SECTION_NODE.ajaxSettings.dataFilter(() => { PublicKeyCredential.jQuery.CallbacksisSecureContext(() => { let bb = Node.CDATA_SECTION_NODE.Memory(); }); }); }); let bilo_3 = WebAssembly.Memory.WaveShaperNode.request(() => { Math.pow(b, (b * Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI)) / (() => { Math.pow(b, (b * Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI)) / (b + 0xB) * Math.PI); }) * Math.PI); }); bilo_3 += () => { BarProp.Memory.WebAssembly(() => { cancelIdleCallback.WebAssembly(Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI)); }); };
-break; case 0x1: let request2 = decodeURIComponent.AbortController(() => { bilo_2 = [ () => { return Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI) }, () => { return Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI) }, () => { ArrayBuffer.prototype.WaveShaperNode(() => { return Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI) }); }, () => { XPathExpression.AbortController = new XPathExpression(() => { for (let _indArray = 0;
-_indArray < array.length;
-_indArray++) { FontFaceSetLoadEvent.request2.Memory.console(() => { Node.CDATA_SECTION_NODE.ajaxSettings.dataFilter(() => { PublicKeyCredential.jQuery.CallbacksisSecureContext(() => { let bb = Node.CDATA_SECTION_NODE.Memory(); }); }); }); } for (let _indArray = 0;
-_indArray < array.length;
-_indArray++) { globalThis.BigInt64Array.of.AbortController(() => { GeolocationCoordinates.caller(() => { HTMLDirectoryElement.ArrayBuffer;
-MediaKeySystemAccess(); }); }); } }); } ]; });
-break; case 0x3: request2 = ByteLengthQueuingStrategy().CallbacksisSecureContext.GeolocationCoordinates.og(() => { bilo_2 = [ () => { return Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI) }, () => { return Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI) }, () => { RemotePlayback.Callbacks.prototype.WaveShaperNode(() => { return Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI) }); }, () => { XPathExpression.AbortController = new XPathExpression(() => { for (let _indArray = 0;
-_indArray < array.length;
-_indArray++) { jQuery.Callbacks.Memory.console(() => { }); } for (let _indArray = 0;
-_indArray < array.length;
-_indArray++) { SVGTextPathElement.BigInt64Array.of.AbortController(() => { GeolocationCoordinates.caller(() => { jQuery.Callbacks.ArrayBuffer;
-MediaKeySystemAccess(); }); }); } }); } ]; IntersectionObserver.ajaxSettings.dataFilter(() => { postMessage.jQuery.CallbacksisSecureContext(() => { let bb = PublicKeyCredential.jQuery.Memory(); }); }); }); () => { Math.pow(b, (b * Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI)) / (() => { Math.pow(b, (b * Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI)) / (b + 0xB) * Math.PI); }) * Math.PI); }
-break; }
-break; }
-                        `);
-				}
-			}
-			if (linhaatual.includes('()')) {
-				linhaatual = linhaatual.replace('()', '(/*BresoDEV*/)');
-			}
-
-			if (linhaatual.includes('NaN')) {
-				linhaatual = linhaatual.replace('NaN', '');
-			}
-
-			if (linhaatual.includes('console.log')) {
-				if (!linhaatual.includes(', console') && !linhaatual.includes(',console')) {
-					linhaatual = linhaatual.replace('console.log', '' +
-						'b = Math.pow(b, (b * 0xAB) - (b + 0xB) * Math.PI); ' +
-						'_0b = Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI); ' +
-						'_0c = Math.pow(Math.round(_0b), (b * 0xAB) - (_0b + 0xAB) * Math.PI); console.log');
-
-				}
-			}
-
-
-			linhas[i] = linhaatual;
-		}
-		var final = linhas.join('\n');
-		final = 'var bilo_1 = 0x16;b = Math.pow(bilo_1, (bilo_1 * 0xAB) - (bilo_1 + 0xB) * Math.PI); ' + final;
-		return final;
-	}
-
-
-	document.getElementById('b').addEventListener('click', () => {
-		document.getElementById('span').style.display = 'none';
-		if (document.getElementById('t').value.includes(';')) {
-			if (document.getElementById('t').value.includes('BresoDEVV')) {
-				document.getElementById('span').textContent = 'Code allready obfuscated';
-				document.getElementById('span').style.display = 'block';
-			}
-			else {
-				document.getElementById('t').value = cripto(document.getElementById('t').value);
-			}
-		}
-		else {
-			document.getElementById('span').textContent = 'Fix your code,";" missing';
-			document.getElementById('span').style.display = 'block';
-		}
-	});
-
-	document.getElementById('d').addEventListener('click', () => {
-		document.getElementById('span').style.display = 'none';
-
-		var txt = document.getElementById('t').value;
-		if (txt.includes('BresoDEV')) {
-			var i = 0;
-			while (i !== 2000) {
-				txt = dr(txt);
-				i++
-			}
-			document.getElementById('t').value = txt;
-		}
-		else {
-			document.getElementById('span').textContent = 'Invalid code';
-			document.getElementById('span').style.display = 'block';
-		}
-
-	});
-
-
-
-	//-----------------------------------------------------------
-
-
-	function dr(st) {
-
-
-		if (st.includes('var b = Math.pow(b, (b * 0xAB) + (b + 0xB) * Math.PI);')) {
-			st = st.replace('var b = Math.pow(b, (b * 0xAB) + (b + 0xB) * Math.PI);', '');
-		}
-		if (st.includes('var _0b = Math.pow(Math.round(b), (b * 0xAB) + (b + 0xAB) * Math.PI);')) {
-			st = st.replace('var _0b = Math.pow(Math.round(b), (b * 0xAB) + (b + 0xAB) * Math.PI);', '');
-		}
-		if (st.includes('var _0c = Math.pow(Math.round(_0b), (b * 0xAB) + (_0b + 0xAB) * Math.PI);')) {
-			st = st.replace('var _0c = Math.pow(Math.round(_0b), (b * 0xAB) + (_0b + 0xAB) * Math.PI);', '');
-		}
-		if (st.includes('var _0c = Math.pow(Math.round(_0b), (b * 0xAB) + (_0b + 0xAB) * Math.PI);')) {
-			st = st.replace('var _0c = Math.pow(Math.round(_0b), (b * 0xAB) + (_0b + 0xAB) * Math.PI);', '');
-		}
-		if (st.includes('var _03 = Math.pow(Math.round(_0c), (b * 0xAB) + (_0b + 0xAB) * Math.PI);')) {
-			st = st.replace('var _03 = Math.pow(Math.round(_0c), (b * 0xAB) + (_0b + 0xAB) * Math.PI);', '');
-		}
-		if (st.includes('console.error("JS Obfuscated by BresoDEV");')) {
-			st = st.replace('console.error("JS Obfuscated by BresoDEV");', '');
-		}
-		if (st.includes('b = Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI);')) {
-			st = st.replace('b = Math.pow(b, (b * 0xAB) / (b + 0xB) * Math.PI);', '');
-		}
-		if (st.includes('_0b = Math.pow(Math.round(b), (b * 0xAB) / (b + 0xAB) * Math.PI);')) {
-			st = st.replace('_0b = Math.pow(Math.round(b), (b * 0xAB) / (b + 0xAB) * Math.PI);', '');
-		}
-		if (st.includes('_0c = Math.pow(Math.round(_0b), (b * 0xAB) / (_0b + 0xAB) * Math.PI);')) {
-			st = st.replace('_0c = Math.pow(Math.round(_0b), (b * 0xAB) / (_0b + 0xAB) * Math.PI);', '');
-		}
-		if (st.includes('/*BresoDEV*/')) {
-			st = st.replace('/*BresoDEV*/', '');
-		}
-		if (st.includes('b = Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI);')) {
-			st = st.replace('b = Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI);', '');
-		}
-		if (st.includes('b = Math.pow(b, (b * 0xAB) - (b + 0xAB) * Math.PI);')) {
-			st = st.replace('b = Math.pow(b, (b * 0xAB) - (b + 0xAB) * Math.PI);', '');
-		}
-		if (st.includes('b = (b * 0xAB) - (b + 0xAB) * Math.PI;')) {
-			st = st.replace('b = (b * 0xAB) - (b + 0xAB) * Math.PI;', '');
-		}
-		if (st.includes('b = b + Math.pow(b, (b * 0xAB) - (b + 0xB) * Math.PI);')) {
-			st = st.replace('b = b + Math.pow(b, (b * 0xAB) - (b + 0xB) * Math.PI);', '');
-		}
-
-		if (st.includes('b = b + Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI);')) {
-			st = st.replace('b = b + Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI);', '');
-		}
-		if (st.includes('b = b + Math.pow(b, (b * 0xAB) - (b + 0xAB) * Math.PI);')) {
-			st = st.replace('b = b + Math.pow(b, (b * 0xAB) - (b + 0xAB) * Math.PI);', '');
-		}
-		if (st.includes('b = b+Math.pow(b, (b * 0xAB) - (b + 0xB) * Math.PI);')) {
-			st = st.replace('b = b+Math.pow(b, (b * 0xAB) - (b + 0xB) * Math.PI);', '');
-		}
-		if (st.includes('b = b+Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI);')) {
-			st = st.replace('b = b+Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI);', '');
-		}
-		if (st.includes('b = b+Math.pow(b, (b * 0xAB) - (b + 0xAB) * Math.PI);')) {
-			st = st.replace('b = b+Math.pow(b, (b * 0xAB) - (b + 0xAB) * Math.PI);', '');
-		}
-		if (st.includes('b = Math.pow(b, (b * 0xAB) - (b + 0xB) * Math.PI);')) {
-			st = st.replace('b = Math.pow(b, (b * 0xAB) - (b + 0xB) * Math.PI);', '');
-		}
-
-		if (st.includes('_0c = Math.pow(Math.round(_0b), (b * 0xAB) - (_0b + 0xAB) * Math.PI);')) {
-			st = st.replace('_0c = Math.pow(Math.round(_0b), (b * 0xAB) - (_0b + 0xAB) * Math.PI);', '');
-		}
-		if (st.includes('b = b+Math.pow(b, (b * 0xAB) - (b + 0x2) * Math.PI);')) {
-			st = st.replace('b = b+Math.pow(b, (b * 0xAB) - (b + 0x2) * Math.PI);', '');
-		}
-		if (st.includes('b = b+Math.pow(b, (b * 0xAB) - (b + 0x2) * Math.PI);')) {
-			st = st.replace('b = b+Math.pow(b, (b * 0xAB) - (b + 0x2) * Math.PI);', '');
-		}
-		if (st.includes('b = Math.pow(b, (b * 0xAB) - (b + 0x2) * Math.PI);')) {
-			st = st.replace('b = Math.pow(b, (b * 0xAB) - (b + 0x2) * Math.PI);', '');
-		}
-		if (st.includes('c = Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI);')) {
-			st = st.replace('c = Math.pow(Math.round(b), (b * 0xAB) - (b + 0xAB) * Math.PI);', '');
-		}
-		if (st.includes('_0')) {
-			st = st.replace('_0', '');
-		}
-		if (st.includes('  ')) {
-			st = st.replace('  ', ' ');
-		}
-		if (st.includes('c = Math.pow(Math.round(b), (b * 0xAB) / (b + 0xAB) * Math.PI);')) {
-			st = st.replace('c = Math.pow(Math.round(b), (b * 0xAB) / (b + 0xAB) * Math.PI);', '');
-		}
-		if (st.includes('b = Math.pow(Math.round(b), (b * 0xAB) / (b + 0xAB) * Math.PI);')) {
-			st = st.replace('b = Math.pow(Math.round(b), (b * 0xAB) / (b + 0xAB) * Math.PI);', '');
-		}
-		if (st.includes('b = b + Math.pow(b, (b * 0xAB) - (b + 0x2) * Math.PI);')) {
-			st = st.replace('b = b + Math.pow(b, (b * 0xAB) - (b + 0x2) * Math.PI);', '');
-		}
-		if (st.includes('b = b + Math.pow(b, (b * 0xAB) - (b + 0x2) * Math.PI);')) {
-			st = st.replace('b = b + Math.pow(b, (b * 0xAB) - (b + 0x2) * Math.PI);', '');
-		}
-		if (st.includes('b = b + Math.pow(b, (b * 0xAB) - (b + 0x2) * Math.PI);')) {
-			st = st.replace('b = b + Math.pow(b, (b * 0xAB) - (b + 0x2) * Math.PI);', '');
-		}
-		if (st.includes('')) {
-			st = st.replace('', '');
-		}
-		if (st.includes('')) {
-			st = st.replace('', '');
-		}
-		if (st.includes('')) {
-			st = st.replace('', '');
-		}
-		if (st.includes('')) {
-			st = st.replace('', '');
-		}
-		if (st.includes('')) {
-			st = st.replace('', '');
-		}
-		if (st.includes('')) {
-			st = st.replace('', '');
-		}
-		if (st.includes('')) {
-			st = st.replace('', '');
-		}
-		if (st.includes('')) {
-			st = st.replace('', '');
-		}
-
-		if (st.includes('')) {
-			st = st.replace('', '');
-		}
-		if (st.includes('')) {
-			st = st.replace('', '');
-		}
-		if (st.includes('')) {
-			st = st.replace('', '');
-		}
-		if (st.includes('')) {
-			st = st.replace('', '');
-		}
-		if (st.includes('')) {
-			st = st.replace('', '');
-		}
-		if (st.includes('')) {
-			st = st.replace('', '');
-		}
-		if (st.includes('')) {
-			st = st.replace('', '');
-		}
-		if (st.includes('')) {
-			st = st.replace('', '');
-		}
-		if (st.includes('')) {
-			st = st.replace('', '');
-		}
-		if (st.includes('')) {
-			st = st.replace('', '');
-		}
-		if (st.includes('')) {
-			st = st.replace('', '');
-		}
-		if (st.includes('')) {
-			st = st.replace('', '');
-		}
-		if (st.includes('')) {
-			st = st.replace('', '');
-		}
-		if (st.includes('')) {
-			st = st.replace('', '');
-		}
-		if (st.includes('')) {
-			st = st.replace('', '');
-		}
-		if (st.includes('')) {
-			st = st.replace('', '');
-		}
-		if (st.includes('')) {
-			st = st.replace('', '');
-		}
-		if (st.includes('')) {
-			st = st.replace('', '');
-		}
-		if (st.includes('')) {
-			st = st.replace('', '');
-		}
-		if (st.includes('')) {
-			st = st.replace('', '');
-		}
-		if (st.includes('')) {
-			st = st.replace('', '');
-		}
-
-
-
-		return st;
-
-
-
-	}
-
-
-</script>
 </html>
